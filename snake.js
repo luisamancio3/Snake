@@ -10,7 +10,7 @@ function Snake(){
     this.update = function(){
         // shifts the tail to the last position as the snake;
         if (this.total === this.tail.length) {
-            for (let i = 0; i < this.tail.length - 1; i++) {
+            for (let i = 0; i < this.tail.length; i++) {
                 this.tail[i] = this.tail[i + 1];
             }
         }
@@ -27,7 +27,7 @@ function Snake(){
     this.show = function(){
         fill(255);
         // shifts the tails over to it's last position
-        for (let i = 0; i < this.tail.length - 1; i++) {
+        for (let i = 0; i < this.tail.length; i++) {
             rect(this.tail[i].x, this.tail[i].y, scl, scl);
         }
         fill(255);
